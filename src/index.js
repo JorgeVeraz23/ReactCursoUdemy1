@@ -1,17 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Usuario from './componentes/Usuario';
+
+
+
+const App = () => {
+  const [sesion, cambiarEstadoSesion] = useState(true);
+
+
+  return (
+<div>
+  {sesion === true ? 
+  <>
+    <>
+    <Usuario />
+    <button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</button>
+
+    </>
+    </>
+  :
+   <>
+   <p>No has Iniciado Sesion</p>
+   <button onClick={() => cambiarEstadoSesion(true)}>Iniciar Sesion</button>
+   </>
+   
+   }
+
+</div>  
+  )
+}
+
+
+
+/*const verificarSesion = (sesionvalor) => {
+  if(sesion === true){
+    return jsx;
+  }else {
+    return <h1>No has iniciado sesion</h1>
+  }
+}*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
