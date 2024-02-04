@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import Usuario from './componentes/Usuario';
 import FormularioInicioSesion from './componentes/FormularioInicioSesion';
 import ContadorFuncional from './componentes/ContadorFuncional';
+import './index.css'
+import Boton from './elementos/Boton';
 
 
 
@@ -11,14 +13,16 @@ const App = () => {
 
 
   return (
-<div>
+<div className="contenedor">
   {sesion === true ? 
   <>
     <>
     <Usuario />
     <ContadorFuncional cantidadAIncrementar={100} cantidadADisminuir={20}/>
-    <button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</button>
 
+    {/*<button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</button>
+    */}
+    <Boton onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</Boton>
     </>
     </>
   :

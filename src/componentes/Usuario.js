@@ -1,5 +1,6 @@
 import React from 'react';
 import Titulo from './Titulo'
+import styled from 'styled-components';
 
 const Usuario = () => {
     const presentacion = "me llamo jorge";
@@ -11,7 +12,7 @@ const amigos = ['Jorge', 'Maria', 'Josue Veas']
     
       <Titulo />
       <Titulo usuario = "Jorge" color = "green" />
-  <p>que la pases bien... Saludos!</p>
+  <Parrafo>que la pases bien... Saludos!</Parrafo>
   {pais && <p>tu eres de: {pais}</p>}
   <ul>
     {amigos.map((amigo, index) => {
@@ -21,6 +22,10 @@ const amigos = ['Jorge', 'Maria', 'Josue Veas']
       </div>
     )
   };
+
+const Parrafo = styled.p`
+    margin: 20px 0;
+    `;
 
   export default Usuario;
   
