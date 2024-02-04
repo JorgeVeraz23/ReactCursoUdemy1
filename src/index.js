@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Usuario from './componentes/Usuario';
 import FormularioInicioSesion from './componentes/FormularioInicioSesion';
-
+import ContadorFuncional from './componentes/ContadorFuncional';
 
 
 
@@ -16,13 +16,14 @@ const App = () => {
   <>
     <>
     <Usuario />
+    <ContadorFuncional cantidadAIncrementar={100} cantidadADisminuir={20}/>
     <button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</button>
 
     </>
     </>
   :
    <>
-    <FormularioInicioSesion />
+    <FormularioInicioSesion cambiarEstadoSesion={cambiarEstadoSesion} />
    {/*<button onClick={() => cambiarEstadoSesion(true)}>Iniciar Sesion</button>
    */}
    </>
