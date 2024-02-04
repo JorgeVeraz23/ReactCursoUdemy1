@@ -22,7 +22,7 @@ const App = () => {
 
     {/*<button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</button>
     */}
-    <Boton onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</Boton>
+    <Boton largo marginTop onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesion</Boton>
     </>
     </>
   :
